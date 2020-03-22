@@ -52,7 +52,7 @@ $firestarter-course-accent: mat-palette($mat-pink, A200, A100, A400);
 $firestarter-course-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$firestarter-course-theme: mat-light-theme($firestarter-course-primary, $firestarter-course-accent, $firestarter-course-warn);
+$firestarter-course-theme: mat-dark-theme($firestarter-course-primary, $firestarter-course-accent, $firestarter-course-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
