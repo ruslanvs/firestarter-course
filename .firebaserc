@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestarter-3ac0d": {
+      "hosting": {
+        "firestarter-course": [
+          "firestarter-3ac0d"
+        ]
+      }
+    }
+  }
+}

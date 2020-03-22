@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "firestarter-course",
+      "public": "dist/firestarter-course",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
