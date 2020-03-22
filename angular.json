@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "firestarter-course": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "firestarter-course"
+    }
+  },
+  "defaultProject": "firestarter-course",
+  "cli": {
+    "analytics": "bd37de04-2524-4447-812a-085f9a7a0e88"
+  }
 }
