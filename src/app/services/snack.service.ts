@@ -25,5 +25,5 @@ export class SnackService {
 
       .subscribe();
   }
-  
+
 }
