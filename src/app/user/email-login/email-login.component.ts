@@ -24,10 +24,10 @@ export class EmailLoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.minLength(6), Validators.required]],
       passwordConfirm: ['', []]
-    })
+    });
   }
 
-  changeType(val){
+  changeType(val) {
     this.type = val;
   }
 
@@ -47,7 +47,7 @@ export class EmailLoginComponent implements OnInit {
     return this.form.get('email');
   }
 
-  get password(){
+  get password() {
     return this.form.get('password');
   }
 
@@ -56,7 +56,7 @@ export class EmailLoginComponent implements OnInit {
   }
 
   get passwordDoesMatch() {
-    if(this.type !== 'signup') {
+    if (this.type !== 'signup') {
       return true;
     } else {
       return this.password.value === this.passwordConfirm.value;
@@ -68,20 +68,20 @@ export class EmailLoginComponent implements OnInit {
     const email = this.email.value;
     const password = this.password.value;
     try {
-      if(this.isLogin) {
+      if (this.isLogin) {
         await this.afAuth.auth.signInWithEmailAndPassword(email, password);
       }
-      if(this.isSignup) {
+      if (this.isSignup) {
         await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
       }
-      if(this.isPasswordReset){
+      if (this.isPasswordReset) {
         await this.afAuth.auth.sendPasswordResetEmail(email);
         this.serverMessage = 'Check your email';
       }
-    } catch(err) {
+    } catch (err) {
       this.serverMessage = err;
     }
-    
+
     this.loading = false;
   }
 
